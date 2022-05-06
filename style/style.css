@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+.title-nav {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+nav ul{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin-right: 50px;
+    list-style: none;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+/*index*/
+.indexContent {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.indexContent h2 {
+    margin-left: 5%;
+}
+.indexContent .para {
+    text-align: justify;
+    width: 75%;
+}
+
+/*cv*/
+.cvContent {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.cvContent .cv {
+    display: flex;
+    flex-direction: column;
+}
+.cvContent .pp {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 50%;
+    border-radius: 50%;
+}
+.cvContent .text {
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*entreprise*/
+.logo {
+    width: 25%;
+    height: 25%;
+    float: right;
+    right: 0px;
+}
+.entrepriseContent {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.entrepriseContent .presentation {
+    margin-top: 30px;
+}
+.entrepriseContent .action {
+    margin-top: 30px;
+}
+
+/*activite*/
+
+/*competence*/
+
+/*tech*/
+
+/*veille*/
