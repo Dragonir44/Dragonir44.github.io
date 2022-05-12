@@ -48,11 +48,13 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
+.cvContent .pplink {
+    margin: auto;
+}
 .cvContent .pp {
-    height: 100px;
-    width: 100px;
-    position: relative;
-    left: 50%;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
 }
 .cvContent .text {
@@ -61,6 +63,31 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+
+.cvContent .block-exp {
+    width: 55%;
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-right: 5px;
+}
+
+.cvContent h3 {
+    text-align: center;
+}
+
+.cvContent .block-formation {
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-left: 5px;
+}
+
+.cvContent .exp {
+    text-align: justify;
+    margin: 20px;
+}
+.cvContent .form {
+    text-align: justify;
+    margin: 20px;
+}
+
 
 /*entreprise*/
 .logo {
@@ -82,6 +109,21 @@ h2 {
 }
 
 /*activite*/
+.activityBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.activityBox p {
+    background-color: rgba(77, 77, 77, 0.612);
+    border-radius: 10px;
+    width: 70%;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+}
+
 
 /*competence*/
 
