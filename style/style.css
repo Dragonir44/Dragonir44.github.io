@@ -1,33 +1,115 @@
 * {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --text-color: black;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
 }
 .title-nav {
     text-align: center;
     color: white;
     background-color: black;
 }
+/* menu copier et adapter de https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-deroulant/ */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+}
+
 nav ul{
-    display:flex;
+    list-style-type: none;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
-nav ul li {
-    margin-right: 50px;
-    list-style: none;
+
+nav ul li{
+    float: left;
+    width: 10%;
+    text-align: center;
+    position: relative;
 }
-nav ul li a {
-    color: white;
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
     text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 10px;
 }
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+    color: black;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content: " ▼";
+    font-size: 12px;
+}
+
 
 h2 {
     text-decoration: underline;
+}
+
+footer {
+    margin-top: 25%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    width: 50px;
+}
+footer img {
+    width: 50px;
 }
 
 /*index*/
 .indexContent {
     margin-left: 5%;
     margin-right: 5%;
+    color: var(--text-color);
 }
 .indexContent h2 {
     margin-left: 5%;
@@ -43,6 +125,7 @@ h2 {
     margin-right: 5%;
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
 }
 .cvContent .cv {
     display: flex;
@@ -100,6 +183,7 @@ h2 {
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    color: var(--text-color);
 }
 .entrepriseContent .presentation {
     margin-top: 30px;
@@ -113,6 +197,14 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: var(--text-color);
+}
+
+.activityBox .skills {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
 }
 
 .activityBox p {
@@ -123,24 +215,17 @@ h2 {
     padding: 20px;
     margin: auto;
 }
-
+.activityBox p img {
+    text-align: center;
+}
 
 /*competence*/
+.competenceContent {
+    color: var(--text-color);
+}
+
 
 /*tech*/
-
-/*veille*/
-.veilleContent {
-    display: flex;
-    flex-direction: column;
-}
-.veilleContent a {
-    background-color: lime;
-    border-radius: 10px;
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    margin: 10px;
-    width: 150px;
-    text-align: center;
+.techContent {
+    color: var(--text-color);
 }
