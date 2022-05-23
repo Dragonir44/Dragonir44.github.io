@@ -103,7 +103,13 @@
                             <a href="competence.html#5">Mettre à disposition des utilisateurs un service informatique</a>
                         </div>
                         <p>
-                            
+                            Cette activitée fût le fil rouge de mon stage. Il fallait trouver un moyen de créer des machines virtuel, récupérer ses informations réseaux, modifier les noms d'utilisateurs/mot de passe des comptes
+                            et de créer des comptes sur le service <a href="tech.html#guaca">apache guacamole</a> pour permettre à des formateurs d'avoir un "bac à sable" pour les stagiaires, et enfin d'envoyer un mail regrouppant les informations 
+                            de connexion (Nom de la VM, identifiant et mot de passe guacamole) ainsi que les heures et date de validité. <br>
+                            Pour réalisé ce projet, il m'a fallut utilisé des technologies qui m'était inconnue, à savoir <a href="tech.html#terra">Terraform</a> et <a href="tech.html#ansible">Ansible</a>, utilisé via un script bash le tout dans un container <a href="tech.html#docker">Docker</a>
+                            fonctionnant sur un serveur Debian 11. <br>
+                            Dans le script bash, on est invité à saisir les informations utile comme le nom et prénom du formateur, le nom de la formation, les dates et heures de validité ainsi que le nombre de machine virtuel à déployer sur <a href="tech.html#vspere">VMware vSphere</a>. <br>
+                            J'y ai également ajouter une option pour supprimé les machines virtuel et compte déployer par le script.
                         </p>
                     </div>
                     <div id="5">
