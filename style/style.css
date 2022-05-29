@@ -244,9 +244,36 @@ footer img {
 }
 
 /*competence*/
-.competenceContent {
+.competenceContent{
     margin-top: 5%;
+}
+.competenceContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     color: var(--text-color);
+}
+
+.competenceContent .activity {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.competenceContent p {
+    background-color: rgba(77, 77, 77, 0.612);
+    border-radius: 10px;
+    width: 70%;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+}
+.competenceContent p img {
+    text-align: center;
+}
+.competenceContent p a {
+    color: beige;
 }
 
 
