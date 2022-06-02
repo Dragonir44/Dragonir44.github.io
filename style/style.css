@@ -288,6 +288,9 @@ footer img {
 .techContent img{
     width: 250px;
 }
+.techContent a{
+    color: rgb(0, 0, 0);
+}
 
 .left{
     margin: 50px;
@@ -295,13 +298,21 @@ footer img {
     display: flex;
     background-color: rgba(116, 115, 115, 0.612);
     border-radius: 10px;
-    color: beige;
+    color: rgb(52, 52, 44);
 }
+.left a:nth-child(1){
+    margin-right: 50px;
+}
+
 .right{
     margin: 50px;
     padding: 50px;
     display: flex;
+
     background-color: rgba(116, 115, 115, 0.612);
     border-radius: 10px;
-    color: beige;
+    color: rgb(52, 52, 44);
+}
+.right a:nth-child(1){
+    order:2;
 }
