@@ -42,47 +42,77 @@
             <div class="techContent">
                 <h2>Technologies</h2>
                 <div class="techContent">
-                    <div id="docker" class="left">
+                    <div id="docker">
                         <h3>Docker</h3>
-                        <img src="../image/docker.webp" alt="Docker">
-                        <p>
-
-                        </p>
+                        <div class="left">
+                            <a href="https://www.docker.com"><img src="../image/docker.webp" alt="Docker"></a>
+                            <p>
+                                <em>Docker</em> est le nom donné à une technologies de conteneurisation de service (d'application) qui est plus léger qu'une machine virtuel grâce au faite qu'il ne virtualise 
+                                pas directement le système d'exploitation, du moins, pas dans tous les cas. <br>
+                                Les rares cas où la conteneurisation d'un système d'exploitation est nécessaire c'est lors de la création d'une image qui n'écessite beaucoup de dépendance. <br>
+                                Par exemple, l'image docker que j'ai créer pour faire du déploiement de machine virtuel sous <a href="#vsphere">vSphere</a> où là, j'ai dû combiner 
+                                <a href="#terra">Terraform</a> et <a href="#ansible">Ansible</a> par le biais d'un script bash.
+                            </p>
+                        </div>
                     </div>
-                    <div id="terra" class="right">
+                    <div id="terra">
                         <h3>Terraform</h3>
-                        <img src="../image/terraform-logo.png" alt="Terraform">
-                        <p>
-
-                        </p>
+                        <div class="right">
+                            <a href="https://www.terraform.io"><img src="../image/terraform-logo.png" alt="Terraform"></a>
+                            <p>
+                                <em>Terraform</em> est une technologie de type IAAS (Infrastructure As A Service) qui permet une gestion de service cloud divers et varier. Il peut être utiliser
+                                sur ce qu'on appel des providers comme Amazon AWS, Google Cloud, <a href="#vsphere">VMware vSphere</a> ou encore proxomox. <br>
+                                Tous ne sont pas gérer de la même façon mais peuvent être utilisé en même temps (ce qui n'est pas très conseiller pour la lisibilité). <br>
+                                On peux également gérer des bases de données ce qui rend Terraform très flexible sur son utilisation.
+                                Un de ses grands atouts est la gestion d'inventaire : lors d'un déploiement de service, il stock les informations de déploiement dans un fichier et le consulte 
+                                à chaque réutilisation, en fonction des différences trouver, il prend lui même la décision de créer, modifier ou supprimé des éléments de l'infrastructure qui
+                                lui est assigner. <br> <br>
+                                Pour ma part, je l'ai utiliser pour créer des machines virtuel, modifier leurs informations dans <a href="#vsphere">vSphere</a> (date de création, propriétaire, 
+                                information de connexion visible que par les administrateurs système) ainsi que la création de mot de passe aléatoire pour des systèmes Windows et la modification
+                                des noms d'utilisateurs.
+                            </p>
+                        </div>
                     </div>
-                    <div id="guaca" class="left">
+                    <div id="guaca">
                         <h3>Apache Guacamole</h3>
-                        <img src="../image/guaca.png" alt="Guacamole">
-                        <p>
-
-                        </p>
+                        <div class="left">
+                            <a href="https://guacamole.apache.org"><img src="../image/guaca.png" alt="Guacamole"></a>
+                            <p>
+                                <em>Apache Guacamole</em> est un outil écrit en language web et qui permet une connexion via RDP, VNC ou SSH avec des machines distante et depuis n'importe où. <br>
+                                Le plus gros atouts, c'est qu'il y a la possibilité de créer une multitude de comptes et de <em>connexion</em> avec des machines et cela, sans compromettre les mots de 
+                                passe des comptes sur les machines distante car, pour chaque connexion, un nom d'utilisateur et un mot de passe de la machine est enregistrer mais l'utilisateurs, lui, 
+                                ne saisi que le mot de passe de son compte <em>Guacamole</em>. <br> <br>
+                                Chez <a href="entreprise.html">Next Decision</a>, cette plateform avait pour but de mettre à disposition des machines virtuel <em>sandbox</em> pour des stagiaires de 
+                                formation.
+                            </p>
+                        </div>
                     </div>
-                    <div id="ansible" class="right">
+                    <div id="ansible">
                         <h3>Ansible</h3>
-                        <img src="../image/Ansible_logo.svg" alt="Ansible">
-                        <p>
+                        <div class="right">
+                            <a href="https://docs.ansible.com/ansible/latest/index.html"><img src="../image/Ansible_logo.svg" alt="Ansible"></a>
+                            <p>
 
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                    <div id="vsphere" class="left">
+                    <div id="vsphere">
                         <h3>VMware vSphere</h3>
-                        <img src="../image/vmware-vsphere-logo.png" alt="vsphere">
-                        <p>
+                        <div class="left">
+                            <a href="https://www.vmware.com/fr/products/vsphere.html"><img src="../image/vmware-vsphere-logo.png" alt="vsphere"></a>
+                            <p>
 
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                    <div id="vscode" class="right">
+                    <div id="vscode">
                         <h3>Visual Studio Code</h3>
-                        <img src="../image/visualstudiocodelogo.png" alt="vscode">
-                        <p>
+                        <div class="right">
+                            <a href="https://code.visualstudio.com"><img src="../image/visualstudiocodelogo.png" alt="vscode"></a>
+                            <p>
 
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
