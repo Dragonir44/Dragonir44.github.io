@@ -109,7 +109,7 @@ h2 {
 }
 
 footer {
-    margin-top: 25%;
+    margin-top: 2.35%;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -203,11 +203,21 @@ footer img {
     float: right;
     right: 0px;
 }
-.entrepriseContent .presentation {
-    margin-top: 30px;
+#entrepriseContentBox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5%;
 }
-.entrepriseContent .action {
+#entrepriseContentBox .presentation {
     margin-top: 30px;
+    width: 40%;
+    text-align: justify;
+}
+#entrepriseContentBox .action {
+    margin-top: 30px;
+    width: 40%;
+    text-align: justify;
 }
 
 /*activite*/
