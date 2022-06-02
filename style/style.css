@@ -281,4 +281,13 @@ footer img {
 .techContent {
     margin-top: 5%;
     color: var(--text-color);
+    display: flex;
+    
+}
+
+.left{
+
+}
+.right{
+
 }
