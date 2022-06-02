@@ -282,12 +282,26 @@ footer img {
     margin-top: 5%;
     color: var(--text-color);
     display: flex;
-    
+    flex-direction: column;
+}
+
+.techContent img{
+    width: 250px;
 }
 
 .left{
-
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    background-color: rgba(116, 115, 115, 0.612);
+    border-radius: 10px;
+    color: beige;
 }
 .right{
-
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    background-color: rgba(116, 115, 115, 0.612);
+    border-radius: 10px;
+    color: beige;
 }
