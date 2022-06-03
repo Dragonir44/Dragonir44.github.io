@@ -61,7 +61,7 @@
                             <a href="https://www.terraform.io"><img src="../image/terraform-logo.png" alt="Terraform"></a>
                             <p>
                                 <em>Terraform</em> est une technologie de type IAAS (Infrastructure As A Service) qui permet une gestion de service cloud divers et varier. Il peut être utiliser
-                                sur ce qu'on appel des providers comme Amazon AWS, Google Cloud, <a href="#vsphere">VMware vSphere</a> ou encore proxomox. <br>
+                                sur ce qu'on appel des providers comme Amazon AWS, Google Cloud, <a href="#vsphere">VMware vSphere</a> ou encore proxmox. <br>
                                 Tous ne sont pas gérer de la même façon mais peuvent être utilisé en même temps (ce qui n'est pas très conseiller pour la lisibilité). <br>
                                 On peux également gérer des bases de données ce qui rend Terraform très flexible sur son utilisation.
                                 Un de ses grands atouts est la gestion d'inventaire : lors d'un déploiement de service, il stock les informations de déploiement dans un fichier et le consulte 
@@ -92,7 +92,10 @@
                         <div class="right">
                             <a href="https://docs.ansible.com/ansible/latest/index.html"><img src="../image/Ansible_logo.svg" alt="Ansible"></a>
                             <p>
-
+                                <em>Ansible</em> est une technologie similaire à <a href="#terra">Terraform</a> : il peut permettre le déploiement de machine virtuel
+                                sur <a href="#vsphere">VMware vSphere</a> mais ne dispose pas d'autant de possibilité et la configuration est différente, tout comme 
+                                leur language (<em>Terraform</em> est basé sur du GO alors que <em>Ansible</em> est basé sur du python). <br><br>
+                                Durant mon projet, j'ai utilisé <em>Ansible</em> pour exécuter des requêtes SQL ainsi que l'envoie de mail basé sur un template
                             </p>
                         </div>
                     </div>
@@ -101,7 +104,8 @@
                         <div class="left">
                             <a href="https://www.vmware.com/fr/products/vsphere.html"><img src="../image/vmware-vsphere-logo.png" alt="vsphere"></a>
                             <p>
-
+                                <em>VMware vSphere</em> est un hyperviseur de machine virtuel comme peut l'être Proxmox, mais contrairement à Proxmox, <em>vSphere</em> 
+                                prend pas en charge de base la conteneurisation mais il deispose d'une meilleur compatibilité avec <a href="#terra">Terraform</a>
                             </p>
                         </div>
                     </div>
@@ -110,7 +114,9 @@
                         <div class="right">
                             <a href="https://code.visualstudio.com"><img src="../image/visualstudiocodelogo.png" alt="vscode"></a>
                             <p>
-
+                                <em>Visual Studio Code</em> est un éditeur de texte open source, il dispose donc d'une infinité d'extension pour divers langages et 
+                                extension de fichier ce qui peut faire de lui un très bonne IDE (Integrated Devloppment Environment). <br><br>
+                                Il m'a été bien utile pour de la prise en mains à distance via une connexion SSH pour l'édition des scripts de déploiement.
                             </p>
                         </div>
                     </div>
