@@ -21,13 +21,10 @@
     border: 3px solid black;
 }
 
-.page {
-    display: flex;
-    flex-direction: column;
-}
 .title-nav {
     position: fixed;
     width: 100%;
+    top: 0;
     text-align: center;
     color: white;
     background-color: black;
@@ -132,6 +129,7 @@ footer img {
     margin-left: 5%;
 }
 .indexContent .para {
+    margin-bottom: 2%;
     text-align: justify;
     width: 75%;
 }
@@ -257,7 +255,7 @@ footer img {
 .competenceContent{
     margin-top: 5%;
 }
-.competenceContent {
+.competenceBox {
     display: flex;
     flex-direction: column;
     text-align: center;
