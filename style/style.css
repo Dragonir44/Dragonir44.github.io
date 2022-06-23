@@ -1,328 +1,139 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    scrollbar-width: thin;
-    scrollbar-color: black black;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
-:root {
-    --text-color: black;
-}
-
-*::-webkit-scrollbar {
-    width: 12px;
-}
-*::-webkit-scrollbar-track{
-    background: transparent;
-}
-*::-webkit-scrollbar-thumb{
-    background-color: black;
-    border-radius: 20px;
-    border: 3px solid black;
-}
-
-.title-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    color: white;
-    background-color: black;
-}
-/* menu copier et adapter de https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-deroulant/ */
-nav{
-    width: 100%;
-    margin: 0 auto;
-    background-color: black;
-    position: sticky;
-    top: 0px;
-}
-
-nav ul{
-    list-style-type: none;
+body{
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f53b57;
+    transition: 0.5s;
 }
-
-nav ul li{
-    float: left;
-    width: 10%;
-    text-align: center;
+.navigation{
     position: relative;
+    width: 70px;
+    height: 350px;
+    background: #fff;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
-
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid transparent;
-    padding: 10px 10px;
-}
-
-nav a:hover{
-    color: orange;
-    border-bottom: 2px solid orange;
-}
-
-.sous{
-    display: none;
-    box-shadow: 0px 1px 2px #CCC;
-    background-color: white;
+.navigation ul{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1000;
-}
-nav > ul li:hover .sous{
-    display: block;
-}
-.sous li{
-    float: none;
-    width: 100%;
-    text-align: left;
-}
-.sous a{
-    padding: 10px;
-    border-bottom: none;
-    color: black;
-}
-.sous a:hover{
-    border-bottom: none;
-    background-color: RGBa(200,200,200,0.1);
-}
-.deroulant > a::after{
-    content: " ▼";
-    font-size: 12px;
-}
-
-
-h2 {
-    text-decoration: underline;
-}
-
-footer {
-    margin-top: 2.35%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-}
-footer a {
-    width: 50px;
-}
-footer img {
-    width: 50px;
-}
-
-/*index*/
-.indexContent {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: var(--text-color);
-    visibility: visible;
-}
-.indexContent h2 {
-    margin-left: 5%;
-}
-.indexContent .para {
-    margin-bottom: 2%;
-    text-align: justify;
-    width: 75%;
-}
-
-/*cv*/
-.cvContent {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
     display: flex;
     flex-direction: column;
-    color: var(--text-color);
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li.active a .icon{
+    color: #fff;
+}
+.navigation ul li a .icon i{
+    font-size: 24px;
+}
+.navigation ul li a .title{
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    background: #fff;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
     visibility: hidden;
 }
-.cvContent .cv {
-    display: flex;
-    flex-direction: column;
+.navigation ul li:hover a .title{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+}
+.navigation ul li a .title::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    left: -8px;
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
 }
 
-.cvContent .pplink {
-    margin: auto;
+.navigation ul .indicator{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
 }
-.cvContent .pp {
-    height: 150px;
-    width: 150px;
+.navigation ul .indicator::before{
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #333;
     border-radius: 50%;
+    transition: 0.5s;
 }
-.cvContent .text {
-    font-size: 20px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateY(calc(70px * 0));
 }
-
-.cvContent .block-exp {
-    width: 55%;
-    background-color: rgba(77, 77, 77, 0.612);
-    margin-right: 5px;
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateY(calc(70px * 1));
 }
-
-.cvContent h3 {
-    text-align: center;
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateY(calc(70px * 2));
 }
-
-.cvContent .block-formation {
-    background-color: rgba(77, 77, 77, 0.612);
-    margin-left: 5px;
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateY(calc(70px * 3));
 }
-
-.cvContent .exp {
-    text-align: justify;
-    margin: 20px;
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateY(calc(70px * 4));
 }
-.cvContent .form {
-    text-align: justify;
-    margin: 20px;
+.navigation ul li:nth-child(1).active ~ .indicator::before{
+    background: #f53b57;
 }
-
-
-/*entreprise*/
-
-.entrepriseContent {
-    margin-top: 5%;
-    font-size: 20px;
-    color: var(--text-color);
+.navigation ul li:nth-child(2).active ~ .indicator::before{
+    background: #3c40c6;
 }
-.entrepriseContent .logo {
-    width: 25%;
-    height: 25%;
-    float: right;
-    right: 0px;
+.navigation ul li:nth-child(3).active ~ .indicator::before{
+    background: #05c46b;
 }
-#entrepriseContentBox{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 5%;
+.navigation ul li:nth-child(4).active ~ .indicator::before{
+    background: #0fbcf9;
 }
-#entrepriseContentBox .presentation {
-    margin-top: 30px;
-    width: 40%;
-    text-align: justify;
-}
-#entrepriseContentBox .action {
-    margin-top: 30px;
-    width: 40%;
-    text-align: justify;
-}
-
-/*activite*/
-.activityContent{
-    margin-top: 5%;
-}
-.activityBox {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: var(--text-color);
-}
-
-.activityBox .skills {
-    display: flex;
-    width: 50%;
-    margin: auto;
-    justify-content: space-around;
-}
-
-.activityBox p {
-    background-color: rgba(77, 77, 77, 0.612);
-    border-radius: 10px;
-    width: 70%;
-    text-align: justify;
-    padding: 20px;
-    margin: auto;
-}
-.activityBox p img {
-    text-align: center;
-}
-.activityBox p a {
-    color: beige;
-}
-
-/*competence*/
-.competenceContent{
-    margin-top: 5%;
-}
-.competenceBox {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: var(--text-color);
-}
-
-.competenceContent .activity {
-    display: flex;
-    width: 50%;
-    margin: auto;
-    justify-content: space-around;
-}
-
-.competenceContent p {
-    background-color: rgba(77, 77, 77, 0.612);
-    border-radius: 10px;
-    width: 70%;
-    text-align: justify;
-    padding: 20px;
-    margin: auto;
-}
-.competenceContent p img {
-    text-align: center;
-}
-.competenceContent p a {
-    color: beige;
-}
-
-
-/*tech*/
-.techContent {
-    margin-top: 5%;
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-}
-
-.techContent img{
-    width: 250px;
-}
-.techContent a{
-    color: rgb(0, 0, 0);
-}
-
-.left{
-    margin: 50px;
-    padding: 50px;
-    display: flex;
-    background-color: rgba(116, 115, 115, 0.612);
-    border-radius: 10px;
-    color: rgb(52, 52, 44);
-}
-.left a:nth-child(1){
-    margin-right: 50px;
-}
-
-.right{
-    margin: 50px;
-    padding: 50px;
-    display: flex;
-
-    background-color: rgba(116, 115, 115, 0.612);
-    border-radius: 10px;
-    color: rgb(52, 52, 44);
-}
-.right a:nth-child(1){
-    order:2;
+.navigation ul li:nth-child(5).active ~ .indicator::before{
+    background: #ffa801;
 }
