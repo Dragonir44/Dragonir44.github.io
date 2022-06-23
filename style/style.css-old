@@ -1,0 +1,328 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scrollbar-width: thin;
+    scrollbar-color: black black;
+}
+
+:root {
+    --text-color: black;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track{
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.title-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+/* menu copier et adapter de https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-deroulant/ */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    float: left;
+    width: 10%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 10px;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+    color: black;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content: " ▼";
+    font-size: 12px;
+}
+
+
+h2 {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 2.35%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    width: 50px;
+}
+footer img {
+    width: 50px;
+}
+
+/*index*/
+.indexContent {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--text-color);
+    visibility: visible;
+}
+.indexContent h2 {
+    margin-left: 5%;
+}
+.indexContent .para {
+    margin-bottom: 2%;
+    text-align: justify;
+    width: 75%;
+}
+
+/*cv*/
+.cvContent {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    visibility: hidden;
+}
+.cvContent .cv {
+    display: flex;
+    flex-direction: column;
+}
+
+.cvContent .pplink {
+    margin: auto;
+}
+.cvContent .pp {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.cvContent .text {
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cvContent .block-exp {
+    width: 55%;
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-right: 5px;
+}
+
+.cvContent h3 {
+    text-align: center;
+}
+
+.cvContent .block-formation {
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-left: 5px;
+}
+
+.cvContent .exp {
+    text-align: justify;
+    margin: 20px;
+}
+.cvContent .form {
+    text-align: justify;
+    margin: 20px;
+}
+
+
+/*entreprise*/
+
+.entrepriseContent {
+    margin-top: 5%;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.entrepriseContent .logo {
+    width: 25%;
+    height: 25%;
+    float: right;
+    right: 0px;
+}
+#entrepriseContentBox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+#entrepriseContentBox .presentation {
+    margin-top: 30px;
+    width: 40%;
+    text-align: justify;
+}
+#entrepriseContentBox .action {
+    margin-top: 30px;
+    width: 40%;
+    text-align: justify;
+}
+
+/*activite*/
+.activityContent{
+    margin-top: 5%;
+}
+.activityBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.activityBox .skills {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.activityBox p {
+    background-color: rgba(77, 77, 77, 0.612);
+    border-radius: 10px;
+    width: 70%;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+}
+.activityBox p img {
+    text-align: center;
+}
+.activityBox p a {
+    color: beige;
+}
+
+/*competence*/
+.competenceContent{
+    margin-top: 5%;
+}
+.competenceBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.competenceContent .activity {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.competenceContent p {
+    background-color: rgba(77, 77, 77, 0.612);
+    border-radius: 10px;
+    width: 70%;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+}
+.competenceContent p img {
+    text-align: center;
+}
+.competenceContent p a {
+    color: beige;
+}
+
+
+/*tech*/
+.techContent {
+    margin-top: 5%;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.techContent img{
+    width: 250px;
+}
+.techContent a{
+    color: rgb(0, 0, 0);
+}
+
+.left{
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    background-color: rgba(116, 115, 115, 0.612);
+    border-radius: 10px;
+    color: rgb(52, 52, 44);
+}
+.left a:nth-child(1){
+    margin-right: 50px;
+}
+
+.right{
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+
+    background-color: rgba(116, 115, 115, 0.612);
+    border-radius: 10px;
+    color: rgb(52, 52, 44);
+}
+.right a:nth-child(1){
+    order:2;
+}
