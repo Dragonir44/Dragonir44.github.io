@@ -8,8 +8,7 @@ for (let i=0; i<list.length; i++){
         list[i].className = 'list active';
 
         let bg = document.querySelector('body');
-        let color = list[i].getAttribute('data-color');
-        console.log(bg)
-        bg.style.backgroundColor = color;
+        // let color = list[i].getAttribute('data-color');
+        // bg.style.backgroundColor = color;
     }
 }
