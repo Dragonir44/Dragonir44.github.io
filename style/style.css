@@ -7,16 +7,28 @@
 }
 body{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-    background: #f53b57;
+    background: rgb(44, 44, 44);
     transition: 0.5s;
 }
+
+h1.title{
+    color: #333;
+    background: #fff;
+    border-radius: 13px;
+    padding: 0 10px;
+    margin: 0 0 10px;
+}
+
+/* start menu */
 .navigation{
     position: relative;
-    width: 70px;
-    height: 350px;
+    width: 350px;
+    height: 70px;
+    margin: 0 0 10px;
     background: #fff;
     border-radius: 35px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
@@ -27,7 +39,7 @@ body{
     left: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .navigation ul li{
     position: relative;
@@ -63,7 +75,7 @@ body{
     top: 50%;
     left: 110px;
     background: #fff;
-    transform: translateY(-50%);
+    transform: translateX(-150%);
     padding: 5px 10px;
     border-radius: 6px;
     transition: 0.5s;
@@ -74,7 +86,7 @@ body{
 .navigation ul li:hover a .title{
     opacity: 1;
     visibility: visible;
-    transform: translateX(-25px) translateY(-50%);
+    transform: translateX(-150%) translateY(50px);
 }
 .navigation ul li a .title::before{
     content: '';
@@ -84,7 +96,7 @@ body{
     background: #fff;
     left: -8px;
     top: 50%;
-    transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateX(80%) translateY(-330%);
     border-radius: 2px;
 }
 
@@ -108,19 +120,19 @@ body{
     transition: 0.5s;
 }
 .navigation ul li:nth-child(1).active ~ .indicator{
-    transform: translateY(calc(70px * 0));
+    transform: translateX(calc(70px * 0));
 }
 .navigation ul li:nth-child(2).active ~ .indicator{
-    transform: translateY(calc(70px * 1));
+    transform: translateX(calc(70px * 1));
 }
 .navigation ul li:nth-child(3).active ~ .indicator{
-    transform: translateY(calc(70px * 2));
+    transform: translateX(calc(70px * 2));
 }
 .navigation ul li:nth-child(4).active ~ .indicator{
-    transform: translateY(calc(70px * 3));
+    transform: translateX(calc(70px * 3));
 }
 .navigation ul li:nth-child(5).active ~ .indicator{
-    transform: translateY(calc(70px * 4));
+    transform: translateX(calc(70px * 4));
 }
 .navigation ul li:nth-child(1).active ~ .indicator::before{
     background: #f53b57;
@@ -136,4 +148,32 @@ body{
 }
 .navigation ul li:nth-child(5).active ~ .indicator::before{
     background: #ffa801;
+}
+/* end menu */
+
+.content{
+    visibility: hidden;
+    color: #333;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.content.active{
+    visibility: visible;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    margin-top: 2.35%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    width: 50px;
+}
+footer img {
+    width: 50px;
 }
