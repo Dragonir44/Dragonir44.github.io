@@ -7,9 +7,9 @@
 }
 body{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    height: 100%;
     min-height: 100vh;
     background: rgb(44, 44, 44);
     transition: 0.5s;
@@ -73,9 +73,8 @@ h1.title{
 .navigation ul li a .title{
     position: absolute;
     top: 50%;
-    left: 110px;
+    margin: 0 10px;
     background: #fff;
-    transform: translateX(-150%);
     padding: 5px 10px;
     border-radius: 6px;
     transition: 0.5s;
@@ -86,7 +85,8 @@ h1.title{
 .navigation ul li:hover a .title{
     opacity: 1;
     visibility: visible;
-    transform: translateX(-150%) translateY(50px);
+    transform: translateY(50px);
+    overflow-wrap: normal;
 }
 .navigation ul li a .title::before{
     content: '';
@@ -94,9 +94,9 @@ h1.title{
     width: 12px;
     height: 12px;
     background: #fff;
-    left: -8px;
-    top: 50%;
-    transform: rotate(45deg) translateX(80%) translateY(-330%);
+    left: 30%;
+    top: -5%;
+    transform: rotate(45deg);
     border-radius: 2px;
 }
 
@@ -152,21 +152,105 @@ h1.title{
 /* end menu */
 
 .content{
-    visibility: hidden;
     color: #333;
     background: #fff;
     border-radius: 10px;
     padding: 0 10px;
+    height: 0;
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.05s;
 }
 
 .content.active{
+    opacity: 1;
     visibility: visible;
+    display: block;
+    height: 100%;
+    transition: 0.5s;
+}
+/* index */
+#index {
+    position: relative;
+    margin: 0 0 10px;
+    color: #000;
+}
+#index h2 {
+    margin-left: 5%;
+}
+#index .para {
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+/* cv */
+#cv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px;
+    padding: 10px 10px;
+    color: #000;
+}
+#cv .cvBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+#cv .pplink {
+    margin: auto;
+}
+#cv .pp {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+#cv .text {
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cv .block-exp {
+    width: 55%;
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-right: 5px;
+}
+
+#cv h3 {
+    text-align: center;
+}
+
+#cv .block-formation {
+    background-color: rgba(77, 77, 77, 0.612);
+    margin-left: 5px;
+}
+
+#cv .exp {
+    text-align: center;
+    margin: 20px;
+}
+#cv .form {
+    text-align: center;
+    margin: 20px;
+}
+
+/* projet terminé */
+#projetComplete{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px;
+    padding: 10px 10px;
+    color: #000;
 }
 
 /* footer */
 footer {
     width: 100%;
-    margin-top: 2.35%;
     background-color: black;
     display: flex;
     justify-content: center;
