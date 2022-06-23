@@ -124,6 +124,7 @@ footer img {
     margin-left: 5%;
     margin-right: 5%;
     color: var(--text-color);
+    visibility: visible;
 }
 .indexContent h2 {
     margin-left: 5%;
@@ -142,6 +143,7 @@ footer img {
     display: flex;
     flex-direction: column;
     color: var(--text-color);
+    visibility: hidden;
 }
 .cvContent .cv {
     display: flex;
