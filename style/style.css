@@ -244,8 +244,35 @@ h1.title{
     display: flex;
     flex-direction: column;
     margin: 0 0 10px;
+    width: 100%;
     padding: 10px 10px;
     color: #000;
+}
+#projetComplete .projetBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#projetComplete .projetBlock li{
+    list-style: none;
+}
+#projetComplete .projetBlock li::before{
+    content: '→ ';
+}
+#projetComplete .projetBlock .code{
+    display: flex;
+    height: 25em;
+    width: 100%;
+    margin: 0 20px;
+    line-height: 20px;
+}
+#projetComplete .projetBlock .code pre{
+    background: rgb(21, 21, 21);
+    color: rgb(227, 227, 227);
+    padding: 0 20px;
+    overflow: scroll;
+    overflow-wrap: break-word; 
 }
 
 /* footer */
